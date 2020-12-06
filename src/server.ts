@@ -4,7 +4,7 @@ import checkEnvVariable from './utils/checkEnvVariable';
 import * as dotenv from 'dotenv';
 import User from './routes/user';
 import Car from './routes/car';
-dotenv.config({path:`${__dirname}/config/.env`});
+dotenv.config({path:__dirname+'/../.env'});
 
 const application = new App(
     parseInt(<string>checkEnvVariable(process.env.PORT)),
@@ -14,4 +14,4 @@ const application = new App(
         ]
     );
 
-application.listen()
+application.listen();
